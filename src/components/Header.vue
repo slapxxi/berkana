@@ -27,7 +27,7 @@ function toggleMenu() {
 </script>
 
 <template>
-  <header class="relative col-[full] row-1 grid grid-cols-subgrid">
+  <header class="sticky -top-19 col-[full] row-1 grid grid-cols-subgrid bg-white">
     <div class="subheader py-4">
       <img :src="logoImg" alt="" class="w-full" />
 
