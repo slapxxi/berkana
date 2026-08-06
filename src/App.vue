@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Categories from '@/components/Categories.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 </script>
@@ -7,6 +8,7 @@ import Hero from '@/components/Hero.vue'
   <div class="wrapper">
     <Header />
     <Hero />
+    <Categories />
   </div>
 </template>
 
@@ -14,8 +16,7 @@ import Hero from '@/components/Hero.vue'
 .wrapper {
   display: grid;
   grid-template-columns: [full] 1fr [main] minmax(auto, 1288px) [main-end] 1fr [full-end];
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: auto minmax(calc(100vh - 148px), auto);
   column-gap: calc(var(--spacing) * 8);
-  min-height: 100vh;
 }
 </style>

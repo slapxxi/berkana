@@ -1,9 +1,10 @@
 <script lang="ts" setup>
+import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
 import ServeIcon from '@/assets/serve-icon.svg'
 import Button from '@/components/Button.vue'
+import Controls from '@/components/Controls.vue'
+import IconButton from '@/components/IconButton.vue'
 import Subtitle from '@/components/Subtitle.vue'
-import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
-import DotIcon from '@/components/DotIcon.vue'
 
 const title = 'Аренда специальной техники для эффективных решений вашего бизнеса'
 const subtitle = 'Современная спецтехника'
@@ -35,9 +36,10 @@ const features = [
         <Button>заказать звонок</Button>
         <button class="flex items-center gap-2 text-white/80">
           узнать стоимость
-          <div class="rounded-full border border-white/70 p-2">
+
+          <IconButton variant="outline">
             <ArrowRightIcon class="size-4" />
-          </div>
+          </IconButton>
         </button>
       </div>
 
@@ -52,9 +54,8 @@ const features = [
           <h3 class="mt-auto text-xl">{{ item.title }}</h3>
           <p class="text-lg text-white/70">{{ item.text }}</p>
         </div>
-        <div class="grid gap-2 self-end">
-          <button v-for="item in 3" :key="item"><DotIcon :active="item === 3" /></button>
-        </div>
+
+        <Controls class="self-end mb-12" />
       </div>
     </div>
   </div>
