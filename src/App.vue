@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import About from '@/components/About.vue'
+import Catalogue from '@/components/Catalogue.vue'
 import Categories from '@/components/Categories.vue'
 import Certs from '@/components/Certs.vue'
 import Header from '@/components/Header.vue'
@@ -13,6 +14,7 @@ import Hero from '@/components/Hero.vue'
     <Categories />
     <About />
     <Certs />
+    <Catalogue />
   </div>
 </template>
 

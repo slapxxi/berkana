@@ -3,3 +3,7 @@
 @theme {
   --color-xamber-500: #f8ad1f;
 }
+
+@utility area-* {
+  grid-area: --value([*]);
+}
