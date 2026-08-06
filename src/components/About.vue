@@ -1,0 +1,53 @@
+<script setup lang="ts">
+import aboutImage from '@/assets/about.png'
+import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
+import ExcavatorIcon from '@/assets/excavator-icon.svg'
+import MedalIcon from '@/assets/medal-icon.svg'
+import ThumbsUpIcon from '@/assets/thumbs-up-icon.svg'
+import IconButton from '@/components/IconButton.vue'
+import Subtitle from '@/components/Subtitle.vue'
+
+const subtitle = 'ООО «Беркана»'
+const title = 'О компании'
+const text = [
+  'Наша миссия заключается в том, чтобы предоставить клиентам доступ к надёжной и высококачественной технике, которая поможет им успешно реализовать свои проекты. Мы стремимся устанавливать долгосрочные отношения с нашими клиентами, основанные на доверии и взаимопонимании.',
+  'Предлагаем вам воспользоваться нашими услугами и оставить свой отзыв, так вы поможете сделать наш сервис лучше. Мы стараемся предложить индивидуальный подход каждому клиенту и надеемся на долгосрочное сотрудничество.',
+]
+const points = [
+  { icon: MedalIcon, title: '8 лет', text: 'опыта работы' },
+  { icon: ThumbsUpIcon, title: '>100', text: 'довольных клиентов' },
+  { icon: ExcavatorIcon, title: '>20', text: 'спецтехники' },
+]
+</script>
+
+<template>
+  <div class="col-[main] my-20 grid gap-8 md:grid-cols-2">
+    <img :src="aboutImage" alt="" class="self-center" />
+
+    <div class="grid gap-4">
+      <Subtitle>{{ subtitle }}</Subtitle>
+      <h3 class="text-3xl font-bold">{{ title }}</h3>
+      <p class="text-lg text-neutral-800" v-for="(item, index) in text" :key="index">{{ item }}</p>
+      <button class="flex items-center gap-2 text-xamber-500">
+        читать подробнее
+        <IconButton variant="outline">
+          <ArrowRightIcon class="size-6" />
+        </IconButton>
+      </button>
+
+      <div class="grid grid-cols-3 gap-4">
+        <div
+          v-for="(item, index) in points"
+          :key="index"
+          class="grid border-r border-neutral-300 pr-2 last:border-0"
+        >
+          <div class="grid grid-cols-[24px_auto] gap-x-4 self-start py-4">
+            <component :is="item.icon" class="w-full" />
+            <div class="text-4xl font-bold text-xamber-500">{{ item.title }}</div>
+            <div class="col-2 text-lg text-neutral-800">{{ item.text }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

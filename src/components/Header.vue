@@ -27,7 +27,7 @@ function toggleMenu() {
 </script>
 
 <template>
-  <header class="sticky -top-19 z-10 col-[full] row-1 grid grid-cols-subgrid bg-white">
+  <header class="sticky -top-19 z-20 col-[full] row-1 grid grid-cols-subgrid bg-white">
     <div
       class="col-[main] grid grid-cols-[80px_auto] justify-between gap-8 py-4 md:grid-cols-[80px_1fr_auto]"
     >

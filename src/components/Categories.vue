@@ -20,7 +20,7 @@ const categories = [
 </script>
 
 <template>
-  <div class="col-[main] grid grid-cols-[1fr_10px] gap-4 py-10">
+  <div class="col-[main] grid grid-cols-[1fr_10px] gap-4 my-20">
     <div class="grid grid-cols-2 gap-8">
       <Card v-for="(item, index) in categories" :key="index" :title="item.title" :img="item.img" />
     </div>
