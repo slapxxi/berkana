@@ -4,7 +4,7 @@ import Hero from '@/components/Hero.vue'
 </script>
 
 <template>
-  <div class="wrapper" const u>
+  <div class="wrapper">
     <Header />
     <Hero />
   </div>

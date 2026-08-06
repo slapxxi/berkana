@@ -1,23 +1,59 @@
 <script lang="ts" setup>
+import ServeIcon from '@/assets/serve-icon.svg'
 import Button from '@/components/Button.vue'
 import Subtitle from '@/components/Subtitle.vue'
+import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
+import DotIcon from '@/components/DotIcon.vue'
 
 const title = 'Аренда специальной техники для эффективных решений вашего бизнеса'
 const subtitle = 'Современная спецтехника'
 const text =
   'Мы предлагаем широкий ассортимент спецтехники в аренду, чтобы помочь вам успешно решать задачии в строительстве, ремонте, земельных работах и других сферах.'
+const features = [
+  {
+    title: 'Гибкие условия аренды',
+    text: 'Краткосрочная и долгосрочная аренда, мы подстраиваемся под ваши требования.',
+  },
+  {
+    icon: ServeIcon,
+    title: 'Профессиональное обслуживание',
+    text: 'Наша команда экспертов всегда готова помочь вам выбрать подходящую технику и ответить на все вопросы.',
+  },
+]
 </script>
 
 <template>
   <div class="hero text-white">
-    <div class="col-[main] row-1 grid grid-cols-2">
-      <div class="grid gap-6 self-center">
+    <div class="col-[main] row-1 grid gap-y-12 py-4 md:grid-cols-2">
+      <div class="grid gap-2 self-end">
         <Subtitle>{{ subtitle }}</Subtitle>
         <h2 class="text-4xl">{{ title }}</h2>
         <p class="opacity-60">{{ text }}</p>
-        <div class="flex gap-8">
-          <Button>заказать звонок</Button>
-          <button class="text-white/80">узнать стоимость</button>
+      </div>
+
+      <div class="flex gap-8 self-start md:row-2">
+        <Button>заказать звонок</Button>
+        <button class="flex items-center gap-2 text-white/80">
+          узнать стоимость
+          <div class="rounded-full border border-white/70 p-2">
+            <ArrowRightIcon class="size-4" />
+          </div>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-[1fr_1fr_10px] gap-4 md:row-2">
+        <div
+          v-for="item in features"
+          :key="item.title"
+          class="flex flex-col gap-2 rounded-3xl border border-white/15 bg-black/25 p-6 backdrop-blur-sm"
+          :class="{ 'self-end': !item.icon }"
+        >
+          <component :is="item.icon" v-if="item.icon" class="size-8" />
+          <h3 class="mt-auto text-xl">{{ item.title }}</h3>
+          <p class="text-lg text-white/70">{{ item.text }}</p>
+        </div>
+        <div class="grid gap-2 self-end">
+          <button v-for="item in 3" :key="item"><DotIcon :active="item === 3" /></button>
         </div>
       </div>
     </div>

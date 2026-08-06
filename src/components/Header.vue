@@ -27,11 +27,13 @@ function toggleMenu() {
 </script>
 
 <template>
-  <header class="sticky -top-19 col-[full] row-1 grid grid-cols-subgrid bg-white">
-    <div class="subheader py-4">
+  <header class="sticky -top-19 z-10 col-[full] row-1 grid grid-cols-subgrid bg-white">
+    <div
+      class="col-[main] grid grid-cols-[80px_auto] justify-between gap-8 py-4 md:grid-cols-[80px_1fr_auto]"
+    >
       <img :src="logoImg" alt="" class="w-full" />
 
-      <nav>
+      <nav class="hidden md:block">
         <ul class="flex flex-wrap justify-between gap-4 text-sm">
           <li
             v-for="(item, index) in items"
@@ -78,13 +80,6 @@ function toggleMenu() {
 </template>
 
 <style scoped>
-.subheader {
-  display: grid;
-  grid-template-columns: 80px 1fr auto;
-  gap: calc(var(--spacing) * 8);
-  grid-column: main;
-}
-
 .menu {
   grid-column: full;
   grid-row: 3;
