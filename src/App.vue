@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import About from '@/components/About.vue'
 import Categories from '@/components/Categories.vue'
+import Certs from '@/components/Certs.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 </script>
@@ -11,6 +12,7 @@ import Hero from '@/components/Hero.vue'
     <Hero />
     <Categories />
     <About />
+    <Certs />
   </div>
 </template>
 

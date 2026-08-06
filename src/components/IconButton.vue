@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <button
-    class="cursor-pointer rounded-full border p-3 border-current"
+    class="cursor-pointer rounded-full border p-3 border-current aspect-square"
     :class="{
       'bg-xamber-500 border-xamber-500 text-white hover:opacity-80': props.variant === 'fill',
       'opacity-60 hover:opacity-100': props.variant === 'outline',
