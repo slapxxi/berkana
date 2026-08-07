@@ -14,26 +14,29 @@ const props = defineProps<Props>()
 <template>
   <div class="rounded-[40px] bg-white p-2.5">
     <div class="card grid gap-y-4 rounded-[40px] bg-zinc-50 py-4">
-      <h3 class="text-xl font-bold area-[title]">{{ props.title }}</h3>
-      <h4
-        class="justify-self-start rounded-r-full bg-white p-1 pl-4 pr-4 text-lg font-bold text-xamber-500 area-[text]"
-      >
-        <span class="col-2">
-          {{ props.text }}
-        </span>
-      </h4>
-      <img :src="props.img" alt="" class="area-[card]" />
-      <IconButton class="place-self-end area-[cta]">
-        <ArrowRightIcon class="size-6" />
-      </IconButton>
+      <img :src="props.img" alt="" />
+
+      <div class="flex flex-col">
+        <h3 class="px-4 text-xl font-bold">{{ props.title }}</h3>
+        <h4 class="self-start rounded-r-full bg-white px-4 py-2 text-lg font-bold text-xamber-500">
+          <span class="col-2">
+            {{ props.text }}
+          </span>
+        </h4>
+        <IconButton class="mt-auto ml-auto mr-4 w-min">
+          <ArrowRightIcon class="size-6" />
+        </IconButton>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 .card {
-  grid-template-rows: [card] min-content min-content 1fr [card-end];
-  grid-template-columns: [card] minmax(0, 20px) auto minmax(0, 20px) [card-end];
-  grid-template-areas: '. title title' 'text text .' '. cta .';
+  grid-template-areas: 'card';
+
+  & > * {
+    grid-area: card;
+  }
 }
 </style>
