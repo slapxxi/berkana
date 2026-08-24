@@ -23,21 +23,24 @@ const tiles = [
 </script>
 
 <template>
-  <div class="col-[full] grid grid-cols-subgrid bg-zinc-50 my-20">
-    <div class="col-[main] grid grid-cols-3 gap-8 py-10">
-      <div class="flex gap-4 flex-col">
+  <div class="col-[full] my-20 grid grid-cols-subgrid bg-neutral-100/70">
+    <div class="col-[main] grid md:grid-cols-[1fr_2fr] gap-8 py-10">
+      <div class="flex flex-col gap-4">
         <h2 class="text-3xl font-bold">{{ title }}</h2>
         <p class="text-lg">{{ text }}</p>
-        <Button class="self-start mt-auto">{{ cta }}</Button>
+        <Button class="mt-auto self-start">{{ cta }}</Button>
       </div>
 
-      <TileCard
-        v-for="(tile, index) in tiles"
-        :key="index"
-        :title="tile.title"
-        :text="tile.text"
-        :img="tile.img"
-      />
+      <div class="grid md:grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-8">
+        <TileCard
+          v-for="(tile, index) in tiles"
+          :key="index"
+          :title="tile.title"
+          :text="tile.text"
+          :img="tile.img"
+          class="self-start"
+        />
+      </div>
     </div>
   </div>
 </template>

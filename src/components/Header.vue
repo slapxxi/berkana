@@ -29,11 +29,11 @@ function toggleMenu() {
 <template>
   <header class="sticky -top-19 z-20 col-[full] row-1 grid grid-cols-subgrid bg-white">
     <div
-      class="col-[main] grid grid-cols-[80px_auto] justify-between gap-8 py-4 md:grid-cols-[80px_1fr_auto]"
+      class="col-[main] grid grid-cols-[80px_auto] justify-between gap-8 py-4 lg:grid-cols-[80px_1fr_auto]"
     >
       <img :src="logoImg" alt="" class="w-full" />
 
-      <nav class="hidden md:block">
+      <nav class="hidden lg:block">
         <ul class="flex flex-wrap justify-between gap-4 text-sm">
           <li
             v-for="(item, index) in items"

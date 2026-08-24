@@ -6,6 +6,7 @@ import Categories from '@/components/Categories.vue'
 import Certs from '@/components/Certs.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
+import Popular from '@/components/Popular.vue'
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import Hero from '@/components/Hero.vue'
     <Certs />
     <Catalogue />
     <Advantages />
+    <Popular />
   </div>
 </template>
 

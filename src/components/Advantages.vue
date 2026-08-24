@@ -45,12 +45,14 @@ const advantages = [
 
 <template>
   <div class="col-[main] my-20 grid grid-cols-[1fr_3fr] gap-8">
-    <div class="rounded-[40px] bg-xamber-500 p-8 text-white">
+    <div class="grid content-start gap-2.5 rounded-[40px] bg-xamber-500 p-8 text-white">
       <h2 class="text-3xl">{{ title }}</h2>
       <p>{{ text }}</p>
     </div>
 
-    <div class="grid grid-cols-3 gap-8 rounded-[40px] bg-zinc-50 p-8">
+    <div
+      class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-8 rounded-[40px] bg-zinc-50 p-8"
+    >
       <div
         v-for="(item, index) in advantages"
         :key="index"

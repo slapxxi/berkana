@@ -13,7 +13,7 @@ const props = defineProps<Props>()
 
 <template>
   <div class="rounded-[40px] bg-white p-2.5">
-    <div class="card grid gap-y-4 rounded-[40px] bg-zinc-50 py-4">
+    <div class="card grid gap-y-4 rounded-[40px] bg-neutral-100/70 py-4">
       <img :src="props.img" alt="" />
 
       <div class="flex flex-col">
