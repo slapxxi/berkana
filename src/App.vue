@@ -7,6 +7,7 @@ import Certs from '@/components/Certs.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 import Popular from '@/components/Popular.vue'
+import OurClients from '@/components/OurClients.vue'
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import Popular from '@/components/Popular.vue'
     <Catalogue />
     <Advantages />
     <Popular />
+    <OurClients />
   </div>
 </template>
 

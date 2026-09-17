@@ -43,7 +43,7 @@ const features = [
         </button>
       </div>
 
-      <div class="grid grid-cols-[1fr_1fr_10px] gap-4 md:row-2">
+      <div class="grid gap-4 md:row-2 md:grid-cols-[1fr_1fr_10px]">
         <div
           v-for="item in features"
           :key="item.title"
@@ -55,7 +55,7 @@ const features = [
           <p class="text-lg text-white/70">{{ item.text }}</p>
         </div>
 
-        <Controls class="self-end mb-12" />
+        <Controls class="mb-12 self-end md:grid hidden" />
       </div>
     </div>
   </div>

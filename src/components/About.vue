@@ -35,15 +35,15 @@ const points = [
         </IconButton>
       </button>
 
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid md:grid-cols-3 gap-4">
         <div
           v-for="(item, index) in points"
           :key="index"
-          class="grid border-r border-neutral-300 pr-2 last:border-0"
+          class="grid md:border-r border-neutral-300 pr-2 last:border-0"
         >
           <div class="grid grid-cols-[24px_auto] gap-x-4 self-start py-4">
             <component :is="item.icon" class="w-full" />
-            <div class="text-4xl font-bold text-xamber-500">{{ item.title }}</div>
+            <div class="text-fluid-3xl font-bold text-xamber-500">{{ item.title }}</div>
             <div class="col-2 text-lg text-neutral-800">{{ item.text }}</div>
           </div>
         </div>

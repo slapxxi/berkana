@@ -54,7 +54,7 @@ function toggleMenu() {
     </div>
 
     <div class="z-10 col-[full] grid grid-cols-subgrid bg-zinc-900 py-3 text-white">
-      <div class="col-[main] flex items-center gap-2">
+      <div class="col-[main] flex items-center justify-between gap-2">
         <button
           @click="toggleMenu"
           :class="{ 'text-white/70': menuOpen }"
@@ -63,7 +63,7 @@ function toggleMenu() {
           <MenuIcon class="size-10" :open="menuOpen" />
         </button>
 
-        <nav class="flex-1">
+        <nav class="hidden flex-1 md:block">
           <ul class="flex justify-around">
             <li v-for="(item, index) in nav" :key="index">{{ item }}</li>
           </ul>
