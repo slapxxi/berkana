@@ -8,6 +8,7 @@ import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 import Popular from '@/components/Popular.vue'
 import OurClients from '@/components/OurClients.vue'
+import Blog from '@/components/Blog.vue'
 </script>
 
 <template>
@@ -21,6 +22,7 @@ import OurClients from '@/components/OurClients.vue'
     <Advantages />
     <Popular />
     <OurClients />
+    <Blog />
   </div>
 </template>
 
