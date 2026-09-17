@@ -36,14 +36,14 @@ const props = defineProps<{
 
     <hr class="my-0 text-neutral-200" />
 
-    <div class="grid items-center md:grid-cols-[1fr_auto]">
+    <div class="flex flex-wrap gap-2">
       <div class="flex items-center gap-1">
         <span class="translate-y-0.5 text-sm text-neutral-500">от</span>
         <span class="text-2xl font-bold text-neutral-800">
           {{ props.price }}
         </span>
       </div>
-      <Button class="w-full">Заказать</Button>
+      <Button class="flex-1">Заказать</Button>
     </div>
   </div>
 </template>
