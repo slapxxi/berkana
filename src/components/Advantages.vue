@@ -44,7 +44,7 @@ const advantages = [
 </script>
 
 <template>
-  <div class="col-[main] my-20 grid grid-cols-[1fr_3fr] gap-8">
+  <div class="col-[main] my-20 grid md:grid-cols-[1fr_3fr] gap-8">
     <div class="grid content-start gap-2.5 rounded-[40px] bg-xamber-500 p-8 text-white">
       <h2 class="text-3xl">{{ title }}</h2>
       <p>{{ text }}</p>

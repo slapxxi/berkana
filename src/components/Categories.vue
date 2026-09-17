@@ -20,12 +20,12 @@ const categories = [
 </script>
 
 <template>
-  <div class="col-[main] grid grid-cols-[1fr_10px] gap-4 my-20">
+  <div class="col-[main] my-20 grid grid-cols-[1fr_10px] gap-4">
     <div class="grid grid-cols-2 gap-8">
       <Card v-for="(item, index) in categories" :key="index" :title="item.title" :img="item.img" />
     </div>
 
-    <Controls class="self-end mb-6" />
+    <Controls class="mb-6 w-2 self-end" />
 
     <div class="col-1 row-2 flex gap-8 justify-self-end">
       <IconButton variant="outline"><ArrowLeftIcon class="size-6" /></IconButton>
