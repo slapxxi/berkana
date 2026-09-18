@@ -9,10 +9,10 @@ import Subtitle from '@/components/Subtitle.vue'
 <template>
   <div class="col-[main] my-20">
     <div
-      class="grid auto-rows-min gap-x-8 overflow-hidden md:grid-rows-[min-content_minmax(auto,128px)_auto_auto]"
+      class="grid auto-rows-min gap-x-8 gap-y-4 md:gap-y-0 overflow-hidden"
       :class="$style.container"
     >
-      <div class="grid auto-rows-min gap-y-4">
+      <div class="grid auto-rows-min gap-y-4 md:col-span-full lg:col-auto md:mb-4">
         <Subtitle>Блог</Subtitle>
         <h2 class="text-fluid-2xl font-bold">Статьи</h2>
         <p class="text-fluid-lg text-neutral-800/90">{{ text }}</p>
@@ -30,7 +30,7 @@ import Subtitle from '@/components/Subtitle.vue'
         :title="post.title"
         :text="post.text"
         :img="post.img"
-        class="md:row-span-4 md:grid-rows-subgrid"
+        class="row-span-4 grid-rows-subgrid"
       />
     </div>
   </div>
@@ -38,20 +38,44 @@ import Subtitle from '@/components/Subtitle.vue'
 
 <style module>
 .container {
-  --columns: minmax(auto, 248px) 2fr 2fr 2fr;
+  --columns: 1fr;
+  --rows: initial;
   grid-template-columns: var(--columns);
+  grid-template-rows: var(--rows);
   transition: grid-template-columns 100ms linear;
 
-  &:has(> :nth-child(2):hover) {
-    --columns: minmax(auto, 248px) 3fr 2fr 2fr;
+  @media (min-width: 768px) {
+    --columns: 3fr 3fr 3fr;
+    --rows: auto min-content minmax(200px, auto) minmax(100px, auto) minmax(100px, auto);
+
+    &:has(> :nth-child(2):hover) {
+      --columns: 4fr 3fr 3fr;
+    }
+
+    &:has(> :nth-child(3):hover) {
+      --columns: 3fr 4fr 3fr;
+    }
+
+    &:has(> :nth-child(4):hover) {
+      --columns: 3fr 3fr 4fr;
+    }
   }
 
-  &:has(> :nth-child(3):hover) {
-    --columns: minmax(auto, 248px) 2fr 3fr 2fr;
-  }
+  @media (min-width: 1024px) {
+    --columns: minmax(auto, 248px) 3fr 3fr 3fr;
+    --rows: min-content minmax(auto, 128px) auto auto;
 
-  &:has(> :nth-child(4):hover) {
-    --columns: minmax(auto, 248px) 2fr 2fr 3fr;
+    &:has(> :nth-child(2):hover) {
+      --columns: minmax(auto, 248px) 4fr 3fr 3fr;
+    }
+
+    &:has(> :nth-child(3):hover) {
+      --columns: minmax(auto, 248px) 3fr 4fr 3fr;
+    }
+
+    &:has(> :nth-child(4):hover) {
+      --columns: minmax(auto, 248px) 3fr 3fr 4fr;
+    }
   }
 }
 </style>

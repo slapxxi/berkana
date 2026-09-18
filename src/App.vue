@@ -5,6 +5,7 @@ import Blog from '@/components/Blog.vue'
 import Catalogue from '@/components/Catalogue.vue'
 import Categories from '@/components/Categories.vue'
 import Certs from '@/components/Certs.vue'
+import FAQ from '@/components/FAQ.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 import OurClients from '@/components/OurClients.vue'
@@ -25,6 +26,7 @@ import Testimonials from '@/components/Testimonials.vue'
     <OurClients />
     <Testimonials />
     <Blog />
+    <FAQ />
   </div>
 </template>
 

@@ -13,6 +13,6 @@ const props = defineProps<{
     <QMarkIcon class="-mt-14 w-15 text-xamber-500" />
     <h3 class="font-bold">{{ props.author }}</h3>
     <p>{{ props.text }}</p>
-    <date class="text-neutral-700/50">{{ props.createdAt }}</date>
+    <time class="text-neutral-700/50" :datetime="props.createdAt">{{ props.createdAt }}</time>
   </div>
 </template>

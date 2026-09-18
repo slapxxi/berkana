@@ -10,7 +10,7 @@ import Controls from '@/components/Controls.vue'
     <div class="col-[main]">
       <Swiper
         :slidesPerView="2.3"
-        :spaceBetween="10"
+        :spaceBetween="20"
         :style="{ width: '100%', height: '100%', overflow: 'visible' }"
       >
         <SwiperSlide v-for="q in quotes" :key="q.id" class="py-12">
