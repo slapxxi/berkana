@@ -10,7 +10,6 @@ import Hero from '@/components/Hero.vue'
 import OurClients from '@/components/OurClients.vue'
 import Popular from '@/components/Popular.vue'
 import Testimonials from '@/components/Testimonials.vue'
-import 'swiper/css'
 </script>
 
 <template>
