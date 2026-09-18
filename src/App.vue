@@ -11,6 +11,7 @@ import Hero from '@/components/Hero.vue'
 import OurClients from '@/components/OurClients.vue'
 import Popular from '@/components/Popular.vue'
 import Testimonials from '@/components/Testimonials.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -27,6 +28,7 @@ import Testimonials from '@/components/Testimonials.vue'
     <Testimonials />
     <Blog />
     <FAQ />
+    <Footer />
   </div>
 </template>
 

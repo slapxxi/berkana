@@ -23,7 +23,7 @@ import Subtitle from '@/components/Subtitle.vue'
               <span>
                 {{ item.question }}
               </span>
-              <PlusIcon class="w-full text-xamber-500" />
+              <PlusIcon class="w-full text-(--fg) transition" data-icon />
             </summary>
             <p class="p-2">{{ item.answer }}</p>
           </details>
@@ -37,10 +37,17 @@ import Subtitle from '@/components/Subtitle.vue'
 
 <style module>
 .details {
+  --fg: var(--color-xamber-500);
+
   &::details-content {
     opacity: 0;
     transform: translateY(-10px);
     transition: all 100ms ease-in-out;
+  }
+
+  &[open] [data-icon] {
+    --fg: var(--color-amber-600);
+    transform: rotate(45deg);
   }
 
   &[open]::details-content {

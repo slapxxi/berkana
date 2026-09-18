@@ -32,6 +32,10 @@
   font-size: clamp(1.5rem, 1.364rem + 0.68vw, 1.875rem);
 }
 
+@utility text-fluid-4xl {
+  font-size: clamp(1.5rem, 1.227rem + 1.36vw, 2.25rem);
+}
+
 @utility text-fluid-5xl {
   font-size: clamp(2.25rem, 1.977rem + 1.36vw, 3rem);
 }
