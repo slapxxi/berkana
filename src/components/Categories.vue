@@ -1,22 +1,10 @@
 <script setup lang="ts">
 import ArrowLeftIcon from '@/assets/arrow-left-icon.svg'
 import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
-import ExcavatorImage from '@/assets/excavator.jpg'
-import SamosvalImage from '@/assets/samosval.jpg'
 import Card from '@/components/Card.vue'
 import Controls from '@/components/Controls.vue'
 import IconButton from '@/components/IconButton.vue'
-
-const categories = [
-  {
-    title: 'Экскаваторы-погрузчики',
-    img: ExcavatorImage,
-  },
-  {
-    title: 'Самосвалы',
-    img: SamosvalImage,
-  },
-]
+import { categories } from '@/components/categories.config'
 </script>
 
 <template>

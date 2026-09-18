@@ -4,10 +4,7 @@ import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
 import certImage from '@/assets/cert.jpg'
 import Controls from '@/components/Controls.vue'
 import IconButton from '@/components/IconButton.vue'
-
-const title = 'Сертификаты и лицензии'
-const text =
-  'Мы понимаем, что качество и безопасность — это главные приоритеты в сфере аренды специальной техники. Поэтому мы постоянно стремимся к соблюдению всех стандартов и требованиям, которые гарантируют надёжность и эффективность нашей работы.'
+import { text, title } from '@/components/certs.config'
 </script>
 
 <template>

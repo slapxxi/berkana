@@ -1,44 +1,18 @@
 <script setup lang="ts">
-import img1 from '@/assets/blog1.jpg'
-import img2 from '@/assets/blog2.jpg'
-import img3 from '@/assets/blog3.jpg'
-import BlogCard from '@/components/BlogCard.vue'
-import Subtitle from '@/components/Subtitle.vue'
-import IconButton from '@/components/IconButton.vue'
 import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
-
-const text =
-  'Здесь вы найдёте полезную информацию и рекомендации по аренде специальной техники, которые помогут вам принимать обоснованные решения и оптимизировать процессы на ваших проектах.'
-
-const posts = [
-  {
-    id: 1,
-    title: 'Советы по безопасному использованию техники',
-    text: 'Какие факторы учитывать при выборе спецтехники для вашего проекта.',
-    img: img1,
-  },
-  {
-    id: 2,
-    title: 'Выбор подходящей техники',
-    text: 'Какие факторы учитывать при выборе спецтехники для вашего проекта.',
-    img: img2,
-  },
-  {
-    id: 3,
-    title: 'Последние новости отрасли',
-    text: 'Какие факторы учитывать при выборе спецтехники для вашего проекта.',
-    img: img3,
-  },
-]
+import { posts, text } from '@/components/blog.config'
+import BlogCard from '@/components/BlogCard.vue'
+import IconButton from '@/components/IconButton.vue'
+import Subtitle from '@/components/Subtitle.vue'
 </script>
 
 <template>
   <div class="col-[main] my-20">
     <div
-      class="grid gap-x-8 auto-rows-min grid-rows-[auto_minmax(auto,128px)] overflow-hidden text-ellipsis"
+      class="grid auto-rows-min gap-x-8 overflow-hidden md:grid-rows-[min-content_minmax(auto,128px)_auto_auto]"
       :class="$style.container"
     >
-      <div class="grid gap-y-4">
+      <div class="grid auto-rows-min gap-y-4">
         <Subtitle>Блог</Subtitle>
         <h2 class="text-fluid-2xl font-bold">Статьи</h2>
         <p class="text-fluid-lg text-neutral-800/90">{{ text }}</p>
@@ -56,7 +30,7 @@ const posts = [
         :title="post.title"
         :text="post.text"
         :img="post.img"
-        class="row-span-4 grid-rows-subgrid"
+        class="md:row-span-4 md:grid-rows-subgrid"
       />
     </div>
   </div>

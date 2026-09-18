@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import About from '@/components/About.vue'
 import Advantages from '@/components/Advantages.vue'
+import Blog from '@/components/Blog.vue'
 import Catalogue from '@/components/Catalogue.vue'
 import Categories from '@/components/Categories.vue'
 import Certs from '@/components/Certs.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
-import Popular from '@/components/Popular.vue'
 import OurClients from '@/components/OurClients.vue'
-import Blog from '@/components/Blog.vue'
+import Popular from '@/components/Popular.vue'
+import Testimonials from '@/components/Testimonials.vue'
+import 'swiper/css'
 </script>
 
 <template>
@@ -22,6 +24,7 @@ import Blog from '@/components/Blog.vue'
     <Advantages />
     <Popular />
     <OurClients />
+    <Testimonials />
     <Blog />
   </div>
 </template>

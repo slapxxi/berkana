@@ -1,23 +1,9 @@
 <script setup lang="ts">
 import aboutImage from '@/assets/about.png'
 import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
-import ExcavatorIcon from '@/assets/excavator-icon.svg'
-import MedalIcon from '@/assets/medal-icon.svg'
-import ThumbsUpIcon from '@/assets/thumbs-up-icon.svg'
 import IconButton from '@/components/IconButton.vue'
 import Subtitle from '@/components/Subtitle.vue'
-
-const subtitle = 'ООО «Беркана»'
-const title = 'О компании'
-const text = [
-  'Наша миссия заключается в том, чтобы предоставить клиентам доступ к надёжной и высококачественной технике, которая поможет им успешно реализовать свои проекты. Мы стремимся устанавливать долгосрочные отношения с нашими клиентами, основанные на доверии и взаимопонимании.',
-  'Предлагаем вам воспользоваться нашими услугами и оставить свой отзыв, так вы поможете сделать наш сервис лучше. Мы стараемся предложить индивидуальный подход каждому клиенту и надеемся на долгосрочное сотрудничество.',
-]
-const points = [
-  { icon: MedalIcon, title: '8 лет', text: 'опыта работы' },
-  { icon: ThumbsUpIcon, title: '>100', text: 'довольных клиентов' },
-  { icon: ExcavatorIcon, title: '>20', text: 'спецтехники' },
-]
+import { points, subtitle, text, title } from '@/components/about.config'
 </script>
 
 <template>

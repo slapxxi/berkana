@@ -1,40 +1,10 @@
 <script setup lang="ts">
-import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
 import ArrowLeftIcon from '@/assets/arrow-left-icon.svg'
-import card1Image from '@/assets/bulldozer.png'
-import card2Image from '@/assets/excavator.jpg'
-import card3Image from '@/assets/samosval.jpg'
+import ArrowRightIcon from '@/assets/arrow-right-icon.svg'
+import Controls from '@/components/Controls.vue'
 import DetailsCard from '@/components/DetailsCard.vue'
 import IconButton from '@/components/IconButton.vue'
-import Controls from '@/components/Controls.vue'
-
-const title = 'Популярная спецтехника'
-const items = [
-  {
-    title: 'Экскаватор — погрузчик JCB 4CX',
-    img: card1Image,
-    details: {
-      Габариты: [5.62, 2.35, 2.89],
-    },
-    price: '25 000 руб/смена',
-  },
-  {
-    title: 'Экскаватор — погрузчик JCB 3CX',
-    img: card2Image,
-    details: {
-      Габариты: [5.62, 2.35, 2.89],
-    },
-    price: '25 000 руб/смена',
-  },
-  {
-    title: 'Самосвал',
-    img: card3Image,
-    details: {
-      Габариты: [5.62, 2.35, 2.89],
-    },
-    price: '25 000 руб/смена',
-  },
-]
+import { items, title } from '@/components/popular.config'
 </script>
 
 <template>
